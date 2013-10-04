@@ -1,0 +1,176 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	
+	<meta http-equiv="Content-Language"	content="en-uk" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="AGRICOM AGRICOM Web Portal, Organic Agriculture, Agriculture, Competence, Competence Modelling, Job Profile, Certificate, Training, Learning outcomes, Training Provider, Vocational Education and Training" />
+	<title>AGRICOM Web Portal</title>
+	
+	<link type="text/css" rel="stylesheet" href="css/style.css" media="screen, projection" />
+	<link type="text/css" rel="stylesheet" href="css/ak-style.css" media="screen, projection" />
+	<link type="text/css" rel="stylesheet" href="css/jscal2.css" />
+	<link type="text/css" rel="stylesheet" href="fancybox/jquery.fancybox-1.3.4.css" />
+	
+	<!--external javascript-->
+    <script type="text/javascript" src="http://yui.yahooapis.com/combo?2.8.1/build/yahoo-dom-event/yahoo-dom-event.js&2.8.1/build/container/container_core-min.js&2.8.1/build/datasource/datasource-min.js&2.8.1/build/element/element-min.js&2.8.1/build/paginator/paginator-min.js&2.8.1/build/datatable/datatable-min.js&2.8.1/build/json/json-min.js&2.8.1/build/selector/selector-min.js&2.8.1/build/layout/layout-min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <!--finder javascript-->
+    <script type="text/javascript" src="js/finder/prototype-1.7.1.js"></script>
+	<script type="text/javascript" src="js/finder/jsonp.js"></script>
+    <script type="text/javascript" src="js/finder/sha1.js"></script>
+    <script type="text/javascript" src="js/finder/jaml-all.js"></script>
+    <script type="text/javascript" src="js/finder/finder.js"></script>
+	<script src="js/jquery.min.js"></script>
+	
+</head>
+
+
+
+<body>
+
+<div id=WholePage>
+	<div id="Container">
+    	<div id="Top">
+	    	<div id="Header">
+			
+		<div id="RightHeader">
+			<div id="flags">
+				<a id="it" class="headerFlag" href="changeLanguage-11543.htm"><img src="images/flags/it.png" alt="Change to Italian" title="Change to Italian"></a>
+				<a id="elGR" class="headerFlag" href="changeLanguage-22896.htm"><img src="images/flags/gr.png" alt="Change to Greek" title="Change to Greek"></a>
+				<a id="nl" class="headerFlag" href="changeLanguage-10169.htm"><img src="images/flags/nl.png" alt="Change to Dutch" title="Change to Dutch"></a>
+				<a id="deDE" class="headerFlag" href="changeLanguage-34512.htm"><img src="images/flags/de.png" alt="Change to German" title="Change to German"></a>
+				<a id="en" class="headerFlag" href="changeLanguage-56065.htm"><img src="images/flags/en.png" alt="Change to English" title="Change to English"></a>
+			</div>
+		</div>
+
+
+	</div>
+			<div id="Inter">
+		<div id="Logo">
+		
+			<div id="agricom_logo">
+				<a href="index.htm"></a>
+			</div>    		
+			
+		</div>
+	</div>
+			<div id="Menu">
+		<a id="index" class="toUpdate" href="index.htm">Home</a>
+		<a id="docs" class="active" href="search.htm">Search</a>
+		<a id="docs" class="toUpdate" href="modeling.htm">Library</a>
+		<a id="connect" class="toUpdate" href="connect.htm">Connect</a>
+		<a id="cm" class="toUpdate" href="cm.htm">Online CM</a>
+		<a id="register" class="toUpdate" href="register.htm">Register</a>
+		<a id="contact" class="toUpdate" href="contact.htm" id="contacts">Contact</a>
+		
+				
+	</div> 
+		</div>
+	</div> <!-- end header container -->
+	
+	<!-------------------------------------------------------- start search-->
+<section id="search">
+            <form class="form-wrapper cf" action="" method="get" onsubmit="doSearch(); return false;">
+                <div>
+                    <input type="text" name="query" id="query" class="withplaceholder" placeholder="Search..." required>
+                        <button type="submit">Search</button>
+                        </div>
+                <!--<input type="submit" value="submit" />-->
+            </form>
+</section>
+<!-------------------------------------------------------- end start search-->
+
+	<!-- breadcrumb -->
+	<div id="breadcrumb">
+		<a href="index.html">Home</a> > <a href="javascript:;" class="active">Results</a>
+	</div>
+
+
+	<div class="full_width_part">
+		<h3>Results</h3>
+	</div>
+
+	
+			<div class="facets_sidebar">
+			
+				<!-- Facets -->
+					<!-- Results : (1 - 12 of 216) from Ajax.JSONRequest() -->
+					
+						<div id="insert_summary" ></div>
+						<div id="search_status" ></div>
+					
+					<h3><span>Filter results</span></h3>  
+						
+	                <div id="insert_facets" ></div>
+	                <div class="remove_filters" style="padding: 3px 0 3px 0;">
+	                   <a href="" style="font-size:12px;" onclick="initialSearch(); pagination_hide();"> remove filters</a>
+	                </div>
+				<!-- /FACETS -->
+			
+			</div>
+			
+				
+			<section class="listing">
+			<div class="active_facets" id="active_facets">
+				<span class="active_facets_label">Active Facets: </span>
+			</div>
+             <div id="insert_pagination_top" class="aligncenter"></div>
+             <div id="insert_results"></div> <!--results from AJAX call-->
+			 <div id="insert_pagination_bottom" class="aligncenter"></div>
+			</section>
+				
+	
+
+
+
+	<div id="Footer">
+		<div id="Bottom">
+	
+		<table>
+			<tr>
+				<td><span class="left">&copy; 2010 AGRICOM, all rights reserved</span></td>
+				<td><span class="right">This project has been funded with support from the European Commission. This publication [communication] reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made of the information contained therein</span></td>
+			</tr>
+			
+		</table>
+		
+		
+	</div>
+	</div>
+	 	
+</div>
+	 
+<script type="text/javascript">
+
+    $.noConflict();
+function customizeFinder() {
+    return {
+        
+                "selectedProviders":["AGRICOMJOB","AGRICOMCOMPETENCE","AGRICOMOPPORTUNITIES","AGLRJOBS","AGLRFOODPOLITICS","FOAERPTOOLKIT","AGLRFUTUREFARM","ACCESS","AGLRFAOIMARK","GFAR","RUFORUM","CIGAR","AGRLFSKN","AGLRFAOCAPACITYPORTAL","AGLRCGIAR","AGLRFAOCDX","OPTUNESCO" ],
+        "selectedLanguage":"en",
+        "externalSources": ["wp","scr","ss","gb"],
+        "pageContainers": ['bottom','top'],
+        "facets": ["provider","language","lrt", "context", "iur", "tagr"], 
+        "maxLengthDescription":  300,
+        "pageSize": 6,
+        "repositoryName": "Organic.Edunet",
+        "serviceUrl":"http://54.228.180.124:8080/glnRepo/api/ariadne/restp"
+        
+    }
+}
+
+</script>
+
+</body>
+
+</html>
+
+
+<!-- Localized -->
