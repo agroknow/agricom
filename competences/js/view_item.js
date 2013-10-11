@@ -15,6 +15,17 @@ function getItemFromURL(urlTemp)
                 var arrayWithJSONS = JSON.parse(data);
                 console.log(arrayWithJSONS);
                 
+                var facetmap = [];
+                /* lrt mapping */
+				facetmap['model']="Competence";
+				facetmap['tool']="Skill";
+				facetmap['glossary']="Knowledge";
+				
+				/* lrt mapping */
+				facetmap['compulsory education']="Key Competence";
+				facetmap['pre-school']="Individual Competence";
+				facetmap['pre-graduate education']="Sector Competence";
+                
                 
 //-------------
                 if(arrayWithJSONS[0].languageBlocks.length!==undefined && arrayWithJSONS[0].languageBlocks!==undefined )
@@ -31,14 +42,12 @@ function getItemFromURL(urlTemp)
                 /* description */
                 document.getElementById('itemDescription').innerHTML = getElement(languageBlock.description);
                 
-                /* coverage */
-                document.getElementById('itemCountry').innerHTML = getElement(languageBlock.coverage);
+                /*Type*/ 
+                document.getElementById('itemType').innerHTML = facetmap[getElement(arrayWithJSONS[0].tokenBlock.learningResourceTypes[0])];
                 
-                /* format */
-                document.getElementById('itemFormat').innerHTML = getElement(languageBlock.format);
+                /*Category*/ 
+                document.getElementById('itemCategory').innerHTML = facetmap[getElement(arrayWithJSONS[0].tokenBlock.contexts[0])];          
                 
-                /*classification*/ 
-                document.getElementById('itemClassification').innerHTML = getElement(arrayWithJSONS[0].tokenBlock.taxonPaths);
                 
                 if(arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url!==undefined)
                 {
@@ -210,14 +219,12 @@ function getItemFromURL(urlTemp)
                 /* description */
                 document.getElementById('itemDescription').innerHTML = getElement(languageBlock.description);
                 
-                /* coverage */
-                document.getElementById('itemCountry').innerHTML = getElement(languageBlock.coverage);
+                /*Type*/ 
+                document.getElementById('itemType').innerHTML = facetmap[getElement(arrayWithJSONS[0].tokenBlock.learningResourceTypes[0])];
                 
-                /* format */
-                document.getElementById('itemFormat').innerHTML = getElement(languageBlock.format);
-                
-                /*classification*/ 
-                document.getElementById('itemClassification').innerHTML = getElement(arrayWithJSONS[0].tokenBlock.taxonPaths);
+                /*Category*/ 
+                document.getElementById('itemCategory').innerHTML = facetmap[getElement(arrayWithJSONS[0].tokenBlock.contexts[0])];                
+
                 
                 if(arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url!==undefined)
                 {

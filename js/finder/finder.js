@@ -87,34 +87,41 @@ var FINDER_INITIALIZED = false;
 var CHECK = 0;
 var iter = 0;
 
+/* providers mapping */
+var facetmap = [];
+facetmap['aglrfaocdx']="FAO codex";
+facetmap['optunesco']="UNESCO Open Training Platform";
+facetmap['aglrcgiar']="CGIAR Learning Resources Center";
+facetmap['aglrfaocapacityportal']="FAO capacity portal";
+facetmap['ruforum']="RuForum";
+facetmap['gfar']="GFAR";
+facetmap['aglrfaoimark']="FAO iMark";
+facetmap['access']="Access Agriculture";
+facetmap['aglrfuturefarm']="Future Farmers";
+facetmap['aglrfoodpolitics']="Food Politics";
+facetmap['agricomopportunities']="Agricom Opportunities";
+facetmap['agricomjobs']="Agricom Jobs";
+facetmap['agricomcompetences']="Agricom Competences";
 
-var providerName = [];
-providerName['aglrfaocdx']="FAO codex";
-providerName['optunesco']="UNESCO Open Training Platform";
-providerName['aglrcgiar']="CGIAR Learning Resources Center";
-providerName['aglrfaocapacityportal']="FAO capacity portal";
-providerName['ruforum']="RuForum";
-providerName['gfar']="GFAR";
-providerName['aglrfaoimark']="FAO iMark";
-providerName['access']="Access Agriculture";
-providerName['aglrfuturefarm']="Future Farmers";
-providerName['aglrfoodpolitics']="Food Politics";
-providerName['agricomopportunities']="Agricom Opportunities";
-providerName['agricomjobs']="Agricom Jobs";
-providerName['agricomcompetences']="Agricom Competences";
-providerName['']="";
+/* language mapping */
+facetmap['en']="English";
+facetmap['fr']="French";
+facetmap['el']="Greek";
+facetmap['es']="Spanish";
+facetmap['de']="German";
+facetmap['nl']="Netherlands";
+facetmap['ar']="ar";
+facetmap['ru']="Russian";
 
+/* lrt mapping */
+facetmap['model']="Competence";
+facetmap['tool']="Skill";
+facetmap['glossary']="Knowledge";
 
-var langName=[];
-langName['en']="English";
-langName['fr']="French";
-langName['el']="Greek";
-langName['es']="Spanish";
-langName['de']="German";
-langName['nl']="Netherlands";
-langName['ar']="ar";
-langName['ru']="Russian";
-
+/* lrt mapping */
+facetmap['compulsory education']="Key Competence";
+facetmap['pre-school']="Individual Competence";
+facetmap['pre-graduate education']="Sector Competence";
 
 google.load("language", "1");
 
@@ -478,7 +485,7 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate)
 	facetExpressions.set(facet,(facetExpressions.get(facet) == undefined) ? facetValue : facetExpressions.get(facet) + "," + facetValue);
 	
 	/* add active facets */
-	$('active_facet_container').insert(Jaml.render('active_facets', facetValue));	
+	facetmap[facetValue.toLowerCase()]!=undefined ? $('active_facet_container').insert(Jaml.render('active_facets', facetmap[facetValue.toLowerCase()])) : $('active_facet_container').insert(Jaml.render('active_facets', facetValue));
 		
 
 	});
@@ -692,7 +699,7 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate)
 									element.insert(Jaml.render('rbcriteria',it2));
 								  }
 								  else
-								  // check first if langName[it2.val] exists already in rbList
+								  // check first if facetmap[it2.val] exists already in rbList
 								  {
 									  checkLang(it2.val,it2.count);
 									  if (CHECK==0)
@@ -733,7 +740,7 @@ function checkLang(name,counter)
                              
                              var langValue = item.id.substring(pos+1);
                              
-                             if (langName[langValue]== langName[name])
+                             if (facetmap[langValue]== facetmap[name])
                              {
                              //   pos = item.name.indexOf('/a');
                              var count = item.innerHTML;
@@ -882,9 +889,9 @@ function initializeJamlTemplates()
 	   //alert(data.val);
 	   var label = data.val.toLowerCase();
 	   //! NOTE: label 'map' creates a problem in jaml rendering. --- TO FIX
-	   if(providerName[label] != undefined && label!="map") 
+	   if(facetmap[label] != undefined && label!="map") 
 	   {
-	   		label = providerName[label];
+	   		label = facetmap[label];
 	   }
 	   
 	   a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick:"toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val,parent: data.field})}, span(label), span({cls:'total'}, data.count));
@@ -900,8 +907,8 @@ function initializeJamlTemplates()
 	
 	   /*alert(data.val);*/
 	   var label = data.val;
-	   if(langName[label] != undefined ){
-	   label = langName[label];
+	   if(facetmap[label] != undefined ){
+	   label = facetmap[label];
 	   }
 	  a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick:"toggleFacetValue('#{id}','#{parent}') ".interpolate({id:data.field + ':' + data.val, parent: data.field})}, span(label), span({cls:'total'}, data.count ));
 	
