@@ -25,7 +25,7 @@
     <script type="text/javascript">
 	    function getItem()
 	    {
-	       getItemFromURL('http://83.212.96.169:8080/akifRetriever/getAKIF?ids='+location.search.split("=")[1]);
+	       getItemFromURL('http://83.212.96.219:8080/akifRetriever/getAKIF?ids='+location.search.split("=")[1]);
 	    }
     </script>
 	
@@ -188,26 +188,6 @@
 	 	
 </div>
 	 
-<script type="text/javascript">
-
-    $.noConflict();
-function customizeFinder() {
-    return {
-        
-       /* "selectedProviders":["EDUAC"],*/
-        "selectedLanguage":"en",
-        "externalSources": ["wp","scr","ss","gb"],
-        "pageContainers": ['bottom','top'],
-        "facets": ["provider","language","lrt", "context", "iur", "tagr"], 
-        "maxLengthDescription":  300,
-        "pageSize": 6,
-        "repositoryName": "Organic.Edunet",
-        "serviceUrl":"http://83.212.96.169:8080/glnRepo/api/ariadne/restp"
-        
-    }
-}
-
-</script>
 
 </body>
 

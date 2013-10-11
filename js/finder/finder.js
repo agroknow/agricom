@@ -90,15 +90,19 @@ var iter = 0;
 
 var providerName = [];
 providerName['aglrfaocdx']="FAO codex";
-providerName['optunesco']="-optunesco";
-providerName['aglrcgiar']="-aglrcgiar";
-providerName['aglrfaocapacityportal']="-aglrfaocapacityportal";
-providerName['ruforum']="-ruforum";
-providerName['gfar']="-gfar";
-providerName['aglrfaoimark']="-aglrfaoimark";
-providerName['access']="-access";
-providerName['aglrfuturefarm']="-aglrfuturefarm";
-providerName['aglrfoodpolitics']="-aglrfoodpolitics";
+providerName['optunesco']="UNESCO Open Training Platform";
+providerName['aglrcgiar']="CGIAR Learning Resources Center";
+providerName['aglrfaocapacityportal']="FAO capacity portal";
+providerName['ruforum']="RuForum";
+providerName['gfar']="GFAR";
+providerName['aglrfaoimark']="FAO iMark";
+providerName['access']="Access Agriculture";
+providerName['aglrfuturefarm']="Future Farmers";
+providerName['aglrfoodpolitics']="Food Politics";
+providerName['agricomopportunities']="Agricom Opportunities";
+providerName['agricomjobs']="Agricom Jobs";
+providerName['agricomcompetences']="Agricom Competences";
+providerName['']="";
 
 
 var langName=[];
@@ -554,7 +558,7 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate)
 				oddCtr++;
 				item.isOdd = oddCtr;
 				
-				//alert(JSON.stringify(item));
+				console.log(item);
 				
 				if(item.format!=undefined && item.format[0]!=undefined)
 				{
