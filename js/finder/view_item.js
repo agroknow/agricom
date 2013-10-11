@@ -31,14 +31,7 @@ function getItemFromURL(urlTemp)
                 /* description */
                 document.getElementById('itemDescription').innerHTML = getElement(languageBlock.description);
                 
-                /* coverage */
-                document.getElementById('itemCountry').innerHTML = getElement(languageBlock.coverage);
-                
-                /* format */
-                document.getElementById('itemFormat').innerHTML = getElement(languageBlock.format);
-                
-                /*classification*/ 
-                document.getElementById('itemClassification').innerHTML = getElement(arrayWithJSONS[0].tokenBlock.taxonPaths);
+
                 
                 if(arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url!==undefined)
                 {
@@ -172,11 +165,11 @@ function getItemFromURL(urlTemp)
 	                {
 		                if(j==languageBlock.keywords.length-1)
 		                {
-			                jQuery('#itemKeywords').append('<a  href="search.html?query='+languageBlock.keywords[j]+'" class="forKomma link last">'+languageBlock.keywords[j]+'</a>');
+			                jQuery('#itemKeywords').append('<a  href="listing.html?query='+languageBlock.keywords[j]+'" class="forKomma link last">'+languageBlock.keywords[j]+'</a>');
 		                }
 		                else
 		                {
-			                jQuery('#itemKeywords').append('<a  href="search.html?query='+languageBlock.keywords[j]+'" class="forKomma link">'+languageBlock.keywords[j]+'</a>');
+			                jQuery('#itemKeywords').append('<a  href="listing.html?query='+languageBlock.keywords[j]+'" class="forKomma link">'+languageBlock.keywords[j]+'</a>');
 		                
 		                }
 	                
@@ -210,14 +203,7 @@ function getItemFromURL(urlTemp)
                 /* description */
                 document.getElementById('itemDescription').innerHTML = getElement(languageBlock.description);
                 
-                /* coverage */
-                document.getElementById('itemCountry').innerHTML = getElement(languageBlock.coverage);
-                
-                /* format */
-                document.getElementById('itemFormat').innerHTML = getElement(languageBlock.format);
-                
-                /*classification*/ 
-                document.getElementById('itemClassification').innerHTML = getElement(arrayWithJSONS[0].tokenBlock.taxonPaths);
+
                 
                 if(arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url!==undefined)
                 {
@@ -352,11 +338,11 @@ function getItemFromURL(urlTemp)
                 	for(var j=0; j<languageBlock.keywords.length;j++)//*ARRAY of keywords in current version
 	                {
 		                if(j==languageBlock.keywords.length-1){
-			                jQuery('#itemKeywords').append('<a  href="search.html?query='+languageBlock.keywords[j]+'" class="forKomma link last">'+languageBlock.keywords[j]+'</a>');
+			                jQuery('#itemKeywords').append('<a  href="listing.html?query='+languageBlock.keywords[j]+'" class="forKomma link last">'+languageBlock.keywords[j]+'</a>');
 						}
 						else
 						{
-			                jQuery('#itemKeywords').append('<a  href="search.html?query='+languageBlock.keywords[j]+'" class="forKomma link">'+languageBlock.keywords[j]+'</a>');
+			                jQuery('#itemKeywords').append('<a  href="listing.html?query='+languageBlock.keywords[j]+'" class="forKomma link">'+languageBlock.keywords[j]+'</a>');
 		                
 		                }
 	                
