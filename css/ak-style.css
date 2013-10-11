@@ -788,3 +788,64 @@
 	box-shadow: 1px 1px 5px #000000;
 
 }
+
+/* flags */
+span.flag {
+	text-indent:-9999px;
+	margin-left:3px;
+	display:inline-block;
+	width:27px;
+	height:18px;
+        background-repeat: no-repeat;
+}
+span.enflag {
+	background:url(images/flags/flag_en.jpg) 0 0 no-repeat;
+        text-indent:-9999px;
+}
+span.esflag {
+	background:url(images/flags/flag_es.png) 0 0 no-repeat;
+        text-indent:-9999px;
+}
+span.itflag {
+	background:url(images/flags/flag_it.png) 0 0 no-repeat;
+        text-indent:-9999px;
+}
+span.grflag {
+	background:url(images/flags/flag_gr.png) 0 0 no-repeat;
+        text-indent:-9999px;
+}
+span.etflag {
+	background:url(images/flags/flag_et.png) 0 0 no-repeat;
+        text-indent:-9999px;
+}
+span.roflag {
+	background:url(images/flags/flag_ro.jpg) 0 0 no-repeat;
+        text-indent:-9999px;
+}
+span.deflag {
+	background:url(images/flags/flag_de.png) 0 0 no-repeat;
+        text-indent:-9999px;
+}
+span.frflag {
+	background:url(images/flags/flag_fr.png) 0 0 no-repeat;
+        text-indent:-9999px;
+}
+a.flag {
+	text-indent:-9999px;
+	margin-left:3px;
+	display:inline-block;
+	width:21px;
+	height:13px;
+}
+a.enflag {
+	background:url(images/flags/flag_en.jpg) 0 0 no-repeat;
+}
+a.spflag {
+	background:url(images/flags/flag_sp.jpg) 0 0 no-repeat;
+}
+a.itflag {
+	background:url(images/flags/flag_it.jpg) 0 0 no-repeat;
+}
+a.grflag {
+	background:url(images/flags/flag_gr.jpg) 0 0 no-repeat;
+}

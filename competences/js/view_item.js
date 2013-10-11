@@ -48,6 +48,8 @@ function getItemFromURL(urlTemp)
                 /*Category*/ 
                 document.getElementById('itemCategory').innerHTML = facetmap[getElement(arrayWithJSONS[0].tokenBlock.contexts[0])];          
                 
+                /*Context Levels*/ 
+                document.getElementById('itemContextLevels').innerHTML = getElement(languageBlock.coverage); 
                 
                 if(arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url!==undefined)
                 {
@@ -225,6 +227,9 @@ function getItemFromURL(urlTemp)
                 /*Category*/ 
                 document.getElementById('itemCategory').innerHTML = facetmap[getElement(arrayWithJSONS[0].tokenBlock.contexts[0])];                
 
+				/*Context Levels*/ 
+                document.getElementById('itemContextLevels').innerHTML = getElement(languageBlock.coverage); 
+                
                 
                 if(arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url!==undefined)
                 {
