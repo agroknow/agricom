@@ -50,23 +50,8 @@ var FACET_LABELS = {};
 
 var SELECTED_LANGUAGE = "en";
 
-FACET_LABELS['provider'] = 'Providers';
-FACET_LABELS['collection'] = 'Collections';
+FACET_LABELS['provider'] = 'Collection';
 FACET_LABELS['language'] = 'Language';
-FACET_LABELS['format'] = 'Media type';
-FACET_LABELS['keyword'] = 'By Tags';
-FACET_LABELS['context'] = 'Educational level';
-FACET_LABELS['lrt'] = 'Resource Type';
-FACET_LABELS['rights'] = 'Rights';
-FACET_LABELS['lom.rights.copyrightandotherrestrictions.string'] = 'Licences';
-FACET_LABELS['tagr'] = 'Typical Range';
-FACET_LABELS['iur'] = 'Intended User Role';
-FACET_LABELS['il'] = 'Interactivity type level';
-FACET_LABELS['classification'] = 'Classification';
-FACET_LABELS['temporal'] = 'Temporal Coverage';
-FACET_LABELS['spatial']= 'Spatial Coverage';
-FACET_LABELS['common'] = 'Common Name';
-
 //FACET_LABELS['contribute'] = 'Contributor'; // added in order to check the field
 
 var LIMIT_FACET_DISPLAY = {};
@@ -110,7 +95,7 @@ facetmap['el']="Greek";
 facetmap['es']="Spanish";
 facetmap['de']="German";
 facetmap['nl']="Netherlands";
-facetmap['ar']="Arabic";
+facetmap['ar']="ar";
 facetmap['ru']="Russian";
 
 /* lrt mapping */
