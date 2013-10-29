@@ -894,7 +894,7 @@ function initializeJamlTemplates()
 	   		label = facetmap[label];
 	   }
 	   
-	   a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick:"toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val,parent: data.field})}, span(label), span({cls:'total'}, data.count));
+	   a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick:"toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val,parent: data.field})}, span(label +" ("+ data.count+")"));
 	
 	});//end rbcriteria
 	
@@ -910,7 +910,7 @@ function initializeJamlTemplates()
 	   if(facetmap[label] != undefined ){
 	   label = facetmap[label];
 	   }
-	  a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick:"toggleFacetValue('#{id}','#{parent}') ".interpolate({id:data.field + ':' + data.val, parent: data.field})}, span(label), span({cls:'total'}, data.count ));
+	  a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick:"toggleFacetValue('#{id}','#{parent}') ".interpolate({id:data.field + ':' + data.val, parent: data.field})}, span(label +" ("+ data.count+")"));
 	
 	 });//end rbcriteria_lang
 	 

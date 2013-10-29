@@ -1,15 +1,16 @@
 body {
 	padding:0;
 	margin:0;
-	background:#E7E9EB ;
+	background:white;
 	font: normal 12px Arial, Helvetica, sans-serif;
 	color:#292929;
+	width:650px;
 }
 
 
 
 #Container {
-	width: 962px;
+	width: 650px;
 	margin: 10px auto;
     height: 112px;
 }
@@ -21,7 +22,7 @@ body {
     min-width: 962px;
     position: relative;
     text-align: left;
-    width: 962px;
+    width: 650px;
 }
 
 #flags{
@@ -51,9 +52,8 @@ transition: all 0.2s ease-in-out;
 
 #WholePage {
     /*height: 91px;   */
-    width: 980px;
-    margin: 0px auto;
-    padding:
+    width: 650px;
+    margin: 5px auto;
 }
 
 #Logo{

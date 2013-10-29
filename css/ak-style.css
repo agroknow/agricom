@@ -1,14 +1,21 @@
 /* green: #8DC830 */
 /* blue: #0F6FA1 */
 
+#ak_wrapper
+{
+	width:650px;
+	margin:10px auto;
+}
+
 #breadcrumb
 {
-	width:100%;
+	width:640px;
 	display: inline-block;
 	border-top:1px solid #0F6FA1;
 	border-bottom:1px solid #0F6FA1;
 	margin-bottom: 20px;
 	color:#0F6FA1;
+	padding-left: 30px;
 }
 
 #breadcrumb a
@@ -24,7 +31,7 @@
 }
 
 .full_width_part{
-    width: 962px;
+    width: 640px;
 	background: #8DC830;
 	text-align: center;
 	line-height: 32px;
@@ -49,7 +56,7 @@
 }
 
 .half_width_part{
-    width: 48%;
+    width: 45%;
 	background: #8DC830;
 	text-align: center;
 	line-height: 32px;
@@ -119,7 +126,7 @@
 
 .landing_links_3 div{
 	float:left;
-	padding:40px 80px;
+	padding:40px 25px;
 	
 }
 
@@ -147,7 +154,7 @@
 
 .landing_links_4 div{
 	float:left;
-	padding:40px 42px;
+	padding:40px 80px;
 	
 }
 
@@ -242,7 +249,7 @@
 
 .featured_item
 {
-	width:460px;
+	width:300px;
 	height:100%;
 	float:left;
 	padding-left:10px;
@@ -266,7 +273,7 @@
 
 .latest_items
 {
-	width:460px;
+	width:320px;
 	height:100%;
 	float:right;
 /* 	background-color: rgba(0,0,0,0.1); */
@@ -525,7 +532,7 @@
 
 /* FACETS */
 .filter {
-	width:230px;
+	width:630px;
 	background:blue;
     margin-bottom:30px;
 
@@ -559,8 +566,8 @@
 .filter_parent.opened span
 {
 	color:#0F6FA1;
-	font-size:1.3em;
-	font-weight:bold;
+	display: block;
+	padding: 0px 5px;
 }
 
 .filter_parent.opened span:after
@@ -569,16 +576,16 @@
 }
 
 .filter_parent span {
-	margin-left:0px;
-	padding-left: 10px;
-	display:block;
+	margin-right:10px;
+	padding: 5px;
+/* 	display:block; */
     font-size:14px;
     color:black;
-    border-bottom: solid 1px rgba(0,0,0, 0.2)
+    background-color:rgba(0,0,0,0.1);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
-
-.filter_parent span:after {
-	content:" +";
 }
 
 .filter_child {
@@ -599,26 +606,36 @@
 }
 .filter_child a:hover
 {
-    background-color:#c9ff15;
     color:#3c5b6f;
-    font-weight:bold;
 }
 
 .filter_child a.facet-selected
 {
-    font-size:14px;
-    font-weight:bold;
-    color:#3c5b6f;
+    color:white;
 }
 
 .filter_child span {
-	display:inline-block;
-	padding:0px;
-	margin:5px 0px 3px 0px;
-	width:75%;
+	display: block;
+	padding:3px;
+	margin:5px;
 	vertical-align:middle;
 	float:left;
-	padding-left: 10px;
+	background-color:rgba(0,0,0,0.1);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.filter_child .facet-selected span {
+	display: block;
+	padding:3px;
+	margin:5px;
+	vertical-align:middle;
+	float:left;
+	background-color:rgba(0,0,0,0.8);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 
 
@@ -629,27 +646,16 @@
 .filter_child span.total
 {
     color:black;
-/* 	position:relative; */
-	width:40px;
-	right:0;
-	top:0;
-	line-height:16px;
-	margin:7px 0px 0px 0px;
-	padding:1px 2px 1px 2px;
-	border:1px solid #20272d;
-	-webkit-border-radius:4px;
-	-moz-border-radius:4px;
-	border-radius:4px;
-	background-color:none;
-	font-weight:normal;
-	text-align:center;
+	font-weight: bold;
+	margin-right: 20px;
+	padding-left: 10px;
+	border-right: 1px solid black;
+	display: block;
 }
 
 .filter_child a.facet-selected span.total
 {
     background-color:#0F6FA1;
-    font-weight:none;  
-    font-size:1em; 
     color:white;
 }
 
@@ -681,28 +687,25 @@
 
 .facets_sidebar
 {
-	width:230px;
+	width:640px;
 	float:left;
 	padding-left:15px;
-	margin-top:30px;
+	margin-top:10px;
 }
 
 .facets_sidebar h3
 {
-
-	margin-top:48px;
+	margin-top:4px;
+	margin-bottom:4px;	
 }
 
 .listing
 {
-	width:710px;
-	float:right;
-	padding-right:15px;
+	width:100%;
 }
 
 .active_facets
 {
-	display:inline-block;
 	width:100%;
 	padding: 30px 0px;
 }
@@ -710,6 +713,7 @@
 .active_facets_label
 {
 	float:left;
+	padding-left: 10px;
 	font-size: 1.1em;
 	padding-top: 3px;
 }
@@ -729,28 +733,9 @@
 /*********************************************************************************/
 /* VIEW ITEM Page                                                                */
 /*********************************************************************************/
-.sidebar
-{
-	width:210px;
-	float:left;
-	margin-left:15px;
-	margin-bottom: 30px;
-}
-
-.sidebar ul
-{
-	list-style: none;
-	padding-left:0px;
-}
-
-.sidebar_titles
-{
-	font-size: 1.2em;
-}
-
 .main_content
 {
-	width:720px;
+	width:640px;
 	float:right;
 	margin-right: 15px;
 	margin-bottom: 30px;
@@ -764,7 +749,7 @@
 
 .main_content ul li
 {
-	padding-bottom:20px;
+	padding-bottom:0px;
 }
 
 #itemThumb
