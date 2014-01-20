@@ -6,22 +6,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link type="text/css" rel="stylesheet" href="../css/style.css" media="screen, projection" />
 	<link type="text/css" rel="stylesheet" href="../css/ak-style.css" media="screen, projection" />
 
-	
+
 	<!--external javascript-->
 	<script src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="js/view_item.js"></script>
-    
+
     <script type="text/javascript">
 	    function getItem()
 	    {
-	       getItemFromURL('http://83.212.96.219:8080/akifRetriever/getAKIF?ids='+location.search.split("=")[1]);
+	       getItemFromURL('http://54.228.180.124:8080/akifRetriever/getAKIF?ids='+location.search.split("=")[1]);
 	    }
     </script>
-	
+
 </head>
 
 
@@ -44,7 +44,7 @@
 
 	<!-- breadcrumb -->
 	<div id="breadcrumb">
-		<a href="../index.html">Home</a> > <a href="index.html">Competences</a> > <a href="listing.html">Results</a> > <a href="javascript:;" class="active">View Item</a> 
+		<a href="../index.html">Home</a> > <a href="index.html">Competences</a> > <a href="listing.html">Results</a> > <a href="javascript:;" class="active">View Item</a>
 	</div>
 
 
@@ -61,12 +61,12 @@
                 <div class="item-content">
                     <div>
                         <p class="itemDescription" id="itemDescription"></p>
-                        
+
                     </div>
                     <div id="itemThumb"></div>
 
                     <div>
-                  
+
 
                     <ul class="itemKeywords">
                     	<li >
@@ -84,33 +84,33 @@
                             <nav id="itemCategory">
                             </nav>
                         </li>
-	                        
+
                         <li><span>Keywords:</span><nav id="itemKeywords"> <!--auto-generated--></nav>
                         </li>
-                        
+
                         <li><span>Context Levels:</span><nav id="itemContextLevels"> <!--auto-generated--></nav>
                         </li>
-                        
+
                         <li><span>Related Competences:</span><nav id="itemCompetences"> <!--auto-generated--></nav>
                         </li>
-                        
+
                     </ul>
                     </div>
-                        
+
                     <div class="clearfix">
-                       
-                        
+
+
                         <div class="floatright"><a href="mailto:info@agroknow.gr?Subject=Agricom" class="reportaproblem">Report a problem</a></div>
                         <div class="floatright" style="margin-right: 15px;" id="itemAccess"></div>
                     </div>
 
                 </div>
-                
+
 			</article>
 
 		<!-- /Content -->
-	
-	 	
+
+
 </div>
 </div>
 </body>
